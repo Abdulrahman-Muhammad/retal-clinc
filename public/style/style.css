@@ -1,0 +1,637 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,200;0,300;1,100;1,200;1,300&family=Roboto:ital,wght@1,100&display=swap");
+:root {
+    --main-color: #214989;
+    --main-font: "Poppins", sans-serif;
+    --second-color: #444;
+    --third-color: #E9BFAD;
+    --fourth-color: #08548E;
+}
+body {
+    background-color: #f8f9fa !important;
+    font-weight: 700;
+}
+/* ============= Nurse Appointments Details Start ============= */
+.ic-table {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 0px;
+    margin-block: 80px;
+    margin-top: 0;
+    font-family: var(--main-font);
+    box-shadow: 0 1.6rem 3rem rgb(0 0 0 / 10%);
+    
+}
+.load{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding-bottom: 50px ;
+  color: #ab3c31;
+  margin-top: -32px;
+}
+.load i {
+  animation: rotation 1.2s infinite linear;
+
+}
+.header_plugin{
+  width: 90%;
+  margin: auto;
+
+}
+.header_plugin .button_add{
+    display: flex;
+    width: 235px;
+    height: 53px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ab3c31;
+    color: #fff;
+    border: none;
+    margin-bottom: 12px;
+    font-weight: 700;
+    border-radius: 9px;
+}
+.ic-table .container-fluid{
+    padding: 45px;
+    padding-top: 0;
+}
+
+.ic-table table tr td {
+    font-family: var(--main-font);
+}
+table tr td span.category {
+    width: max-content;
+    padding: 5px 14px;
+    display: block;
+    background-color: #FF944F;
+    font-family: var(--main-font);
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+table tr td span.category.green{
+    background-color: rgb(76, 175, 80) !important;
+}
+/* ============= Nurse Appointments Details End ============= */
+/* ============= Nurse Appointments Start ============= */
+.nurse-appointment-holder {
+    background-color: #F2F6F9;
+    padding-top: 80px;
+}
+.nurse-appointment-holder .table-holder {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+.table-holder .header {
+    background-color: #EBEBEE;
+    padding: 15px;
+    /* display: grid; */
+    display: flex;
+    gap: 10px;
+    grid-template-columns: auto auto;
+    align-items: center;
+    /* justify-content: space-between; */
+    background-color: var(--main-color);
+    border-radius: 8px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.table-holder .header .input-group {
+    position: relative;
+}
+.table-holder .header .input-group input {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.54);
+    border-radius: 25px;
+    border: 0;
+    height: 45px;
+    padding: 8px 8px 8px 50px;
+    width: 250px;
+    background: #FFFFFF;
+    transition: background 0.2s, width 0.2s;
+    font-family: var(--main-font);
+    padding: 0 20px;
+    outline: none;
+}
+.table-holder .header .input-group i {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.table-holder .header .actions i {
+    background-color: #fff;
+    color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+.table-holder .header .actions a {
+    text-decoration: none;
+}
+.table-holder .header h3 {
+    text-transform: capitalize;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    font-size: 28px;
+
+}
+.table-holder .header  i {
+    font-size: 30px;
+    color: #fff;
+
+}
+.table-holder table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.table-holder table button{
+  width: 90px;
+    height: 34px;
+    background-color: #ab3c31;
+    color: #fff;
+    text-transform: capitalize;
+    border: 1px solid #c5c5c5;
+}
+.table-holder table tr {
+    /* border-bottom: 1px solid rgba(0,0,0,.12); */
+    background-color: #ffffff;
+
+}
+.table-holder table thead tr{
+    text-transform: capitalize;
+    font-weight: 900;
+    background-color: #1e2d46;
+
+    
+}
+.table-holder table thead  tr th{
+    color: #fff;
+
+}
+.table-holder table tr:nth-child(even) {
+    background-color: #F4F5FB;
+}
+.table-holder table tr th {
+    padding: 11px 15px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.54);
+    font-family: var(--main-font);
+    /* border-bottom: 1px solid rgba(240, 9, 9, 0.918) */
+}
+.table-holder table tr td {
+    padding: 11px 15px;
+    color: #343434;
+}
+.table-holder table tr td.max{
+    max-width: 260px
+}
+.table-holder table tr td.center,
+.table-holder table tr th.center{
+    text-align: center
+}
+.table-holder table tr td.link{
+    color: var(--main-color)
+}
+.table-holder table tr td > a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 15px;
+}
+.table-holder table tr td span.delete,
+.table-holder table tr td span.modify{
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.table-holder table tr td span.modify {
+    background-color: var(--main-color);
+    margin: 0 5px;
+}
+.table-holder table tr td span.delete{
+    background-color: #FF4081;
+}
+.table-holder table tr td span a {
+    color: #fff;
+}
+.table-holder table tr td a.name {
+    color: var(--main-color);
+    font-weight: 700;
+}
+/* ============= Nurse Appointments End ============= */
+/* =============  Nurse Add Patient End ============= */
+.ic-table table tr td a.accepted,
+.ic-table table tr td a.refuced {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #0000;
+    padding: 5px 8px;
+    margin-left: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: color 0.15s;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: 700;
+    font-family: var(--main-font);
+}
+.ic-table table tr td a.accepted {
+}
+.ic-table table tr td a.refuced {
+    background-color: #FF4081;
+}
+.ic-table .empty-message{
+    text-align: center;
+    padding-top: 33px;
+    color: var(--main-color);
+}
+.ic-table table td .image-holder{
+    width: 60px;
+    height: 60px;
+    padding: 6px;
+    background-color: #fff;
+}
+.ic-table table td .image-holder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-heading{
+    padding: 100px 0 0 65px;
+    color: var(--second-color);
+    font-family: var(--main-font);
+}
+/* =============  Nurse Add Patient End ============= */
+.show-product{
+    background-color: #F2F6F9;
+    font-family: var(--main-font);
+}
+.show-product .products{
+    width: 75%;
+    margin: 0 auto;
+    padding: 30px;
+}
+.show-product .products h2{
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-size: 38px;
+}
+.main-link{
+    text-decoration: none;
+    color: #333
+}
+.products-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.products-content .product-card {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-bottom: 70px;
+    position: relative;
+}
+.products-content .product-card .image-holder{
+    height: 300px;
+}
+.products-content .product-card .image-holder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.products-content .product-card h5{
+    font-size: 22px;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+.category-name{
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    display: block;
+    color: #F2F2F2;
+}
+.price {
+    font-size: 24px;
+    margin-top: 30px;
+}
+.info-holder{
+    height: 100%;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 0px 15px;
+    padding-top: 20px;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+}
+.price-holder{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    gap: 10px;
+}
+.price-holder span:not(:first-child){
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 800;
+}
+.main-btn{
+    font-family: var(--main-font);
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid #0000;
+    padding: 16px 20px;
+    margin-top: 12px;
+    transition: all 0.15s ease-in-out;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: var(--main-color);
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 18px;
+}
+.main-btn.blue{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.setPreOrder{
+    opacity: 0;
+}
+.product-card ul{
+    padding-left: 15px;
+    margin: 0
+}
+.product-card ul li{
+    margin: 15px 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+.product-card .label{
+    position: absolute;
+    top: 0;
+    padding: 3px 17px;
+    background-color: var(--fourth-color);
+    color: #fff;
+    font-size: 18px;
+}
+.order-content .order-details ul{
+    list-style: none;
+    background-color: #fff;
+    padding: 22px;
+    color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.order-content .order-details ul li{
+    margin: 20px 0;
+    color: #333;
+}
+.line-items{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+}
+.line-items ul{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+.product-heading h4{
+    font-size: 18px;
+    color: #333;
+}
+.line-items ul li{
+    margin: 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    color: #333;
+}
+.line-items ul li:last-child{
+    border-bottom: 0;
+}
+.time{
+    color: var(--main-color)
+}
+.time i{
+    color: var(--main-color)
+}
+/*start page-number*/
+#page-number{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+#page-number button{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 7px;
+
+}
+#page-number h6{
+    font-size: 20px;
+    color: var(--main-color);
+
+}
+ .button-action{
+    display: flex;
+    /* width: 116px; */
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color:#545454 ;
+    color: #ffffff;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    padding: 0 17px;
+    transition: 0.7s;
+    border: 1px solid;
+    border-radius: 78px;
+    font-size: 15px;
+    padding: 6px 14px;
+
+
+
+}
+.button-action:hover{
+    background-color: #fff;
+    color: var(--main-color);
+    border: 1px solid ;
+
+}
+.button-action i {
+    margin-right: 4px;
+}
+.approve{
+    background-color: #45b6af;
+}
+.refund{
+
+}
+.reject{
+    background-color: #F3565D;
+}
+/*settings*/
+.header {
+    position: relative;
+   
+}
+.header  .settings{
+    position: absolute;
+    right: 15px;
+    background-color: #fff0;
+    border: none;
+    cursor: pointer;
+    transition: 0.7s;
+    display: flex;
+    top: 0;
+    align-items: center;
+    height: 100%;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.header  .settings h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    display: none;
+    transition: 2s;
+    display: none;
+
+}
+.header  .settings:hover{
+    background-color: #649e9a;
+    color: #fff;
+}
+table select{
+    padding: 6px 10px;
+    color: #a81d1b;
+    border: 1px solid #a81d1b;
+    background-color: #fff0;
+    font-weight: 600;
+}
+.header .settings {
+  width: 170px;
+  font-size: 16px;
+  justify-content: center;
+  height: 40px;
+  background-color: #ffffff;
+  top: 15px;
+  color: #649e9a;
+  border: 1px solid #ffffff8c;
+}
+
+
+#page-number {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+#page-number button {
+  display: flex;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+/*start search*/
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  margin-left: auto;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+}
+.search .input input {
+  width: 333px;
+  height: 45px;
+  background: none;
+  padding: 0 14px;
+  font-size: 14px;
+  outline: none;
+  border-right: 1px solid #00000030;
+  border-radius: 9px;
+  border: none;
+}
+
+.search button {
+  display: flex;
+  width: 99px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #ab3c31;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 14px 10px #00000045;
+  margin-left: auto;
+  border-radius: 7px;
+}
+.up-input {
+  background-color: #e1e1e1;
+  border: none;
+  display: flex;
+  box-shadow: 0px 0px 10px #00000045;
+  border-radius: 7px;
+}
