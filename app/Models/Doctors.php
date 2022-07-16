@@ -15,7 +15,8 @@ class Doctors extends Model
         'doctor_specialization',
         'telephone_number',
         'description',
-        'image'
+        'image',
+        'image_path'
     ];
     protected $primaryKey = 'doctor_id';
 

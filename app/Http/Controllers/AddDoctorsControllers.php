@@ -50,7 +50,21 @@ class AddDoctorsControllers extends Controller
             return response()->json(["message" => "please Send doctor_id"]);
         }
 
+        if(isset($request->image)){
+            $image = $request->image;
 
+        }else {
+            return response()->json(["message" => "please Send image"]);
+        }
+
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'doctor_name' => 'required'
+        ]);
+
+        $imageName = time() . '-' . $request->doctor_name. '.'.$request->image->extension();
+
+        $request->image->move(public_path('images'), $imageName);
 
         $save_role =  Doctors::Create(
             [
@@ -58,7 +72,9 @@ class AddDoctorsControllers extends Controller
                 'doctor_name' => $doctor_name,
                 'doctor_specialization' => $doctor_specialization,
                 'telephone_number' => $telephone_number,
-                'description' => $description
+                'description' => $description,
+                'image' => $imageName,
+                'image_path' => $imageName
             ]
         );
 

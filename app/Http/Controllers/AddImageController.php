@@ -32,6 +32,8 @@ class AddImageController extends Controller
 
         $request->image->storeAs('images', $imageName);
 
+        $fileName = $request->image->getClientOriginalName();
+
         /* Store $imageName name in DATABASE from HERE */
 
         $save_role =  Images::Create(

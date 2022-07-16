@@ -61,5 +61,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
-Route::get('image-upload', [ AddImageController::class, 'imageUpload' ])->name('image.upload');
-Route::post('image-upload', [ AddImageController::class, 'imageUploadPost' ])->name('image.upload.post');
+// Route::get('image-upload', [ AddImageController::class, 'imageUpload' ])->name('image.upload');
+// Route::post('image-upload', [ AddImageController::class, 'imageUploadPost' ])->name('image.upload.post');
