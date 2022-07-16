@@ -11,6 +11,11 @@ class IndexController extends Controller
     public function HandleRequest(REQUEST $request)
     {
 
+        if(!isset($request->clinic_id) && ($request->clinic_id) != 111){
+            return response()->json(['error'=>'Not Authorized'], 401);
+        }
+
+
         if(isset($request->name)){
             $name = $request->name;
 

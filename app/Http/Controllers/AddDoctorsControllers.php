@@ -9,6 +9,12 @@ class AddDoctorsControllers extends Controller
 {
     public function AddDoctors(Request $request)
     {
+
+        if(!isset($request->clinic_id) && ($request->clinic_id) != 111){
+            return response()->json(['error'=>'Not Authorized'], 401);
+        }
+
+
         if(isset($request->doctor_name)){
             $doctor_name = $request->doctor_name;
 
