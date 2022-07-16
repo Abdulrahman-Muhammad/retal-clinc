@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AddDoctorsControllers;
+use App\Http\Controllers\AddImageController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -56,3 +57,9 @@ Route::get('/showDataOfPatients', [ShowController::class, 'ShowDataOfPatients'])
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+Route::get('image-upload', [ AddImageController::class, 'imageUpload' ])->name('image.upload');
+Route::post('image-upload', [ AddImageController::class, 'imageUploadPost' ])->name('image.upload.post');

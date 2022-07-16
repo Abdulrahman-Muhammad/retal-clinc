@@ -50,12 +50,7 @@ class AddDoctorsControllers extends Controller
             return response()->json(["message" => "please Send doctor_id"]);
         }
 
-        if(isset($request->image)){
-            $image = $request->image;
 
-        }else {
-            return response()->json(["message" => "please Send image"]);
-        }
 
         $save_role =  Doctors::Create(
             [
@@ -63,10 +58,7 @@ class AddDoctorsControllers extends Controller
                 'doctor_name' => $doctor_name,
                 'doctor_specialization' => $doctor_specialization,
                 'telephone_number' => $telephone_number,
-                'description' => $description,
-                'image' => $image,
-
-
+                'description' => $description
             ]
         );
 
