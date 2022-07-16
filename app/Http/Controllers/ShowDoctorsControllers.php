@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Patients;
+use App\Models\Doctors;
 use Illuminate\Http\Request;
 
-class ShowController extends Controller
+class ShowDoctorsControllers extends Controller
 {
-    public function ShowDataOfPatients(REQUEST $request)
+    public function ShowDataOfDoctors(REQUEST $request)
     {
 
         if(isset( $request->perPage)){
@@ -34,7 +34,7 @@ class ShowController extends Controller
             $value = 'desc';
         }
 
-        $pateints =  Patients::select('*')->orderBy('res_date',$value)->paginate($paginate);
+        $pateints =  Doctors::select('*')->orderBy('doctor_name',$value)->paginate($paginate);
 
         return $pateints;
     }

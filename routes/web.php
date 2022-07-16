@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AddDoctorsControllers;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ShowController;
+use App\Http\Controllers\ShowDoctorsControllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +38,14 @@ Route::get('/register', function () {
 });
 
 Route::get('/addPatient', [IndexController::class, 'HandleRequest']);
+
+Route::get('/addDoctor', [AddDoctorsControllers::class, 'AddDoctors']);
+
+Route::get('/deleteDoctor', [DeleteDoctorsControllers::class, 'DeleteDoctors']);
+
+Route::get('/showDoctor', [ShowDoctorsControllers::class, 'ShowDataOfDoctors']);
+
+//DeleteDoctorsControllers
 
 Route::get('/showDataOfPatients', [ShowController::class, 'ShowDataOfPatients']);
 
