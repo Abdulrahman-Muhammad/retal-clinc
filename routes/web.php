@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AddDoctorsControllers;
 use App\Http\Controllers\AddImageController;
+use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\ShowDoctorsControllers;
@@ -30,6 +32,10 @@ Route::get('/home', function () {
 
 Auth::routes();
 
+
+//dont let not logged in user to access these routes 
+
+
 Route::get('/login' , function () {
     return view('auth.login');
 });
@@ -38,7 +44,20 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
+
+Route::group(['middleware' => ['auth']], function() {
+    /**
+    * Logout Route
+    */
+    // Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+Route::get('/logout', [LogoutController::class, 'perform'])->name('logout.perform');
+
+ });
+
 Route::get('/addPatient', [IndexController::class, 'HandleRequest']);
+
+Route::get('/deletePatient', [DeleteController::class, 'DeleteRes']);
+
 
 Route::get('/addDoctor', [AddDoctorsControllers::class, 'AddDoctors']);
 
